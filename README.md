@@ -22,3 +22,5 @@ I am using this in conjunction with this https://github.com/AikoSimidzu/License-
 -PayPal payments
 
 -WebMoney payments
+
+-Open settings
