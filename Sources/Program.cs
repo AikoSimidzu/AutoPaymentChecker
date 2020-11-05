@@ -50,12 +50,16 @@ namespace PaymentChecker
                     {
                         if (ck.type == "IN" && ck.sum.MSC() == "RUB" && ck.sum.amount == 100) //If the payment is incoming & amount in rubles & check sum == {amount}
                         {
-                            string ns = NSFormats.NewPayments(ck.trmTxnId, Helper.Pars(ck.mcomment(), "{HWID=\"", "\"}"), ck.sum.amount.ToString());
                             string a;
                             a = $"ID операции: {ck.trmTxnId} Статус: {ck.statusText} Сумма: {ck.sum.amount} {ck.sum.MSC()} {ck.mcomment()}\n";                            
 
                             if (!tempTickets.Contains(a))
                             {
+                                string ns = NSFormats.NewPayments(ck.trmTxnId, Helper.Pars(ck.mcomment(), "{HWID=\"", "\"}"), ck.sum.amount.ToString());
+                                if (ns.Length < 2)
+                                {
+                                    ns = NSFormats.NewPayments(ck.trmTxnId, Helper.Pars(ck.mcomment(), "{HWID=", "}"), ck.sum.amount.ToString());
+                                }
                                 Telegram.Send(TToken, CID, ns);
                                 File.AppendAllText("Tickets.log", a);
                                 Console.WriteLine(ns);
