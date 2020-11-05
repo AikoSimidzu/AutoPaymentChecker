@@ -52,11 +52,11 @@ namespace PaymentChecker
                         {
                             string ns = NSFormats.NewPayments(ck.trmTxnId, Helper.Pars(ck.mcomment(), "{HWID=\"", "\"}"), ck.sum.amount.ToString());
                             string a;
-                            a = $"ID операции: {ck.trmTxnId} Статус: {ck.statusText} Сумма: {ck.sum.amount} {ck.sum.MSC()} {ck.mcomment()}\n";
-                            Telegram.Send(TToken, CID, ns);
+                            a = $"ID операции: {ck.trmTxnId} Статус: {ck.statusText} Сумма: {ck.sum.amount} {ck.sum.MSC()} {ck.mcomment()}\n";                            
 
                             if (!tempTickets.Contains(a))
                             {
+                                Telegram.Send(TToken, CID, ns);
                                 File.AppendAllText("Tickets.log", a);
                                 Console.WriteLine(ns);
                             }
