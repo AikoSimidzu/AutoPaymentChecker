@@ -16,6 +16,9 @@ I am using this in conjunction with this https://github.com/AikoSimidzu/License-
 
 -Telegram transfer notify
 
+# Changelog
+-Fix telegram log sender
+
 # Plans
 -Add Yandex.Money Service
 
