@@ -162,7 +162,7 @@ namespace PaymentChecker
                 }
                 else
                 {
-                    nn = "Комментарий: " + comment;
+                    nn = "\r\nКомментарий: " + comment;
                 }
                 return nn;
             }
