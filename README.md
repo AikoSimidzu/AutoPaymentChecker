@@ -17,7 +17,9 @@ I am using this in conjunction with this https://github.com/AikoSimidzu/License-
 -Telegram transfer notify
 
 # Changelog
--Fix telegram log sender
+-Added open settings (edit Settings.cfg in program folder)
+
+-Change qiwi timer (before 300ms after 1.5sec)
 
 # Plans
 -Add Yandex.Money Service
@@ -25,5 +27,3 @@ I am using this in conjunction with this https://github.com/AikoSimidzu/License-
 -PayPal payments
 
 -WebMoney payments
-
--Open settings
