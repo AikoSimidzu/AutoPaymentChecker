@@ -20,10 +20,3 @@ I am using this in conjunction with this https://github.com/AikoSimidzu/License-
 -Added open settings (edit Settings.cfg in program folder)
 
 -Change qiwi timer (before 300ms after 1.5sec)
-
-# Plans
--Add Yandex.Money Service
-
--PayPal payments
-
--WebMoney payments
